@@ -16,9 +16,17 @@ Good things to remember:
 	ie. 1 = 1.00 but the opposite is not the case 
 
 USAGE:
-
-1. Import MathOps into a java class of your choice.
-2. Statically use MathOps wherever necessary:
+1. Clone MathOps to a desired directory and build:
+	./gradlew clean build
+	
+2. Import MathOps as a dependency into a project, an easy way to do this with gradle is
+	to add the following to your gradle dependencies:
+	compile files('path/to/build/location/math/build/libs/math-0.0.1-SNAPSHOT.jar')
+	
+3. Import MathOps into a java class of your choice:
+	import math.MathOps;
+	
+4. Statically use MathOps wherever necessary:
 	MathOps.add(1,2) = 3
 	MathOps.toHexString(15) = "F";
 
@@ -39,3 +47,6 @@ Notes:
 	Square roots are rarely whole numbers, the user can choose to convert the result
 	of the sqrt(double d) method to an int if desired, but the method itself will 
 	always return floating point
+	
+	I felt like making the methods static like a regular util class would be handy for 
+	reusing the project more easily. Just import and go. 
